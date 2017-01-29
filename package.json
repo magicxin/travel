@@ -4,7 +4,8 @@
   "description": "My first express project",
   "main": "app.js",
   "dependencies": {
-    "express": "^4.14.0"
+    "express": "^4.14.0",
+    "express3-handlebars": "^0.5.2"
   },
   "devDependencies": {},
   "scripts": {
