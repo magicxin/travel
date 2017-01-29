@@ -9,11 +9,16 @@ var handlebars = require('express3-handlebars').create({defaultLayout : 'main'})
 //	"You will hava a pleasant surprese.",
 	//"Whenever possoble , keep it simple.",
 //];
-
+//添加模板引擎
 app.engine('handlebars' , handlebars.engine);
 app.set('view engine' , 'handlebars');
 
 app.set('port' , process.env.PORT || 3002);
+//添加网页测试
+app.use(function(req , res , next){
+	res.locals.showTests = app.get('env')!=='production'&&req.query.test==='1';
+	next();
+});
 app.use(express.static(__dirname +'/public'));
 //定制404页面
 app.get('/' , function(req , res){
