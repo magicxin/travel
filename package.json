@@ -1,0 +1,26 @@
+{
+  "name": "exfirsttest",
+  "version": "1.0.0",
+  "description": "My first express project",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "command"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/magicxin/exFirstTest.git"
+  },
+  "keywords": [
+    "531441"
+  ],
+  "author": "magic_xin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/magicxin/exFirstTest/issues"
+  },
+  "homepage": "https://github.com/magicxin/exFirstTest#readme"
+}
