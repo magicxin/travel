@@ -27,10 +27,17 @@ app.get('/' , function(req , res){
 	res.render('home');
 });
 app.get('/about', function(req , res){
+	//框架搭建
 	//res.type('text/plain');
 	//res.send('About');
+	//添加一个随机数组功能
 	//var randomFortune = fortunes[Math.floor(Math.random()*fortunes.length)];
-	res.render('about' , {fortune : fortune.getFortune()});
+	//模块化
+	//res.render('about' , {fortune : fortune.getFortune()});
+	res.render('about' , {
+		fortune : fortune.getFortune(),
+		pageTestScript : '/qa/tests-about.js'
+	});
 });
 app.use(function(req , res){
 	//res.type('text/plain');
