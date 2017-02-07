@@ -39,6 +39,23 @@ app.get('/about', function(req , res){
 		pageTestScript : '/qa/tests-about.js'
 	});
 });
+//旅游线路页面
+app.get('/tours/hood-river' , function(req , res){
+	res.render('tours/hood-river');
+});
+//引用页面
+app.get('/tours/request-group-rate' , function(req , res){
+	res.render('tours/request-group-rate');
+});
+//url头
+app.get('/headers', function(req,res){
+	res.set('Content-Type','text/plain');
+	var s = '';
+	for(var name in req.headers){
+		s += name + ': ' + req.headers[name] + '\n';
+	}
+	res.send(s);
+});
 app.use(function(req , res){
 	//res.type('text/plain');
 	res.status(404);
